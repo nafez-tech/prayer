@@ -1,13 +1,83 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0;
+    padding: 0;
+    font-family:cairo;
+    color:#fff
+}
+html{
+    direction: rtl;
+}
+section{
+    min-height: 100vh;
+    background-image: url(../public/assets/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    align-content: center;
+    padding-right: 5em;
+}
+.clander{
+    padding:25px 30px;
+    background: #bababa5c;
+    width:35%;
+    backdrop-filter: blur(10px);
+    border-radius:7px;
+}
+.clander .top-clander{
+    display:flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.top-clander .cities, .top-clander .date{
+    width: 50%;
+}
+.top-clander .cities h3, .top-clander .date h3{
+    font-size: 26px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.top-clander .date p{
+    font-size: 26px;
+}
+
+.top-clander .cities select{
+    width: 80%;
+    background-color: #dc9462;
+    font-size: 17px;
+}
+
+.body-clander{
+    padding-top: 2rem;
+}
+.body-clander .prayer{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #dc956293;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+.prayer h6 {
+    font-size: 16px;
+}
+
+/* =============Mobile View============== */
+@media screen and (max-width: 767px) {
+    section{
+    padding-right: 0;
+    padding: 1em;
+    align-content: start;
+    }
+    .clander{
+        width: 80%;
+    }
+    .top-clander .cities h3, .top-clander .date h3{
+    font-size: 20px;
+}
+
+.top-clander .date p{
+    font-size: 20px;
+}
+.top-clander .cities select{
+    font-size: 14px;
+}
 }
